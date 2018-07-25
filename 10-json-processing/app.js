@@ -1,3 +1,8 @@
+/**
+ * (1) 기본 구조 잡기: app.js, notes.js, notes-data.json, exports 모듈
+ * (2) add/list 기본 기능 구현
+ */
+
 console.log('app.js started.');
 
 const fs = require('fs');

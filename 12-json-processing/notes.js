@@ -44,12 +44,17 @@ var getAll = () => {
 };
 
 var getNote = (title) => {
-    
-    
+    var allNotes = fetchNotes();
+    var filterNotes = allNotes.filter((note) => note.title === title);
+    return filterNotes[0];
 };
 
 var removeNote = (title) => {
-    console.log('Removing note');
+    var allNotes = fetchNotes();
+    var filterNotes = allNotes.filter((note) => note.title !== title);
+    saveNotes(filterNotes);
+
+    return allNotes.length != filterNotes.length; // return true/false
 };
 
 var logNote = (note) => {

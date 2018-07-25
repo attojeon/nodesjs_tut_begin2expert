@@ -1,7 +1,6 @@
 /**
- * (1) 코드 개선
- * (2) add/list 코드 개선
- * (3) logNote 구현, add/list 코드 적용
+ * (1) getNote 구현, array.filter 사용
+ * (2) remove 구현 
  */
 console.log('app.js started.');
 
@@ -30,9 +29,17 @@ if( command === 'add') {
         notes.logNote(note);
     });
 } else if( command === 'read'){
-    notes.getNote( argv.title );
+    var note = notes.getNote( argv.title );
+    if( note ) {
+        notes.logNote(note);
+    }
+    else {
+        console.log('Notes not found');
+    }
 } else if( command === 'remove'){
-    notes.removeNote(argv.title);
+    var ret = notes.removeNote(argv.title);
+    var message = ret ? 'Note was removed' : 'Note not found';
+    console.log(message);
 } else {
     console.log('command error.');
 }

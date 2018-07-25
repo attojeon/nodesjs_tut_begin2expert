@@ -1,5 +1,5 @@
 const fs = require('fs');
-console.log('Note.js started.');
+console.log('Notes.js started.');
 
 
 var addNote = (title, body) => {
