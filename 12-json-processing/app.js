@@ -1,15 +1,25 @@
 /**
  * (1) getNote 구현, array.filter 사용
  * (2) remove 구현 
+ * 
+ * 사용법 :
+ * $ node .\app.js add --title='math subject' --body='math body'
+ * $ node .\app.js list
+ * $ node .\app.js remove --title='math subject'
+ * $ node .\app.js read --title='math subject'
  */
 console.log('app.js started.');
 
 const fs = require('fs');
+/**
+ * command : process module => yargs module 로 변경
+ */
 const yargs = require('yargs');
 const notes = require('./notes');    // 자체 모듈은 상대위치를 잡아준다.
 
 const argv = yargs.argv;
-var command  = process.argv[2];
+//var command  = process.argv[2];
+var command = argv._[0];
 console.log('Yargs:', argv);
 console.log('Command', command);
 
