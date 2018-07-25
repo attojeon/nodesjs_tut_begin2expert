@@ -4,8 +4,8 @@ console.log('Note.js started.');
 
 /**
  * JOSN.parse(json_type_string) : 
- *   (1) convert from json_type_string to javascript object
- *   (2) convert to javascript array
+ *   (1) getNote 구현
+ *   (2) removeNote 구현
  */
 
 var fetchNotes = () => {
