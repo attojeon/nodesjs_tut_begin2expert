@@ -1,5 +1,12 @@
 const request = require('request');
 
+
+/**
+ * 
+ * @param {*} lat 
+ * @param {*} lng 
+ * @param {*} callback ( errorMessage, result ): 두 인자의 순서를 주의!
+ */
 var getWeather = (lat, lng, callback) => {
     let myKey = '4230719d28c10ae7905b047f5f446ce3';
     console.log( myKey );

@@ -1,6 +1,8 @@
 /**
  * weather.js 구현
  * 화씨 온도 => 섭씨 온도 변환함.
+ * 사용법 : 
+ *  $ node app.js --address='서울시 관악구'
  */
 const yargs = require('yargs');
 const weather = require('./weather');
