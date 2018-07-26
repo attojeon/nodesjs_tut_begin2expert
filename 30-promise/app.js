@@ -44,7 +44,7 @@ somePromise.then( (message) => {
 //     });
 // };
 
-function declaration type #3
+//function declaration type #3
 var asyncAdd = (a, b) => {
     return new Promise( (resolve, reject) => {
        setTimeout( () => {
