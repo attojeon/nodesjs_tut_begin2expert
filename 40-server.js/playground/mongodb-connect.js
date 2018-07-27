@@ -1,4 +1,4 @@
-require('../config/config');
+require('../server/config/config');
 const {MongoClient} = require('mongodb');
 
 
